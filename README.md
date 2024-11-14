@@ -7,3 +7,4 @@ Required: TreeStyleTab by Piro (https://addons.mozilla.org/en-US/firefox/addon/t
 ![image](https://github.com/user-attachments/assets/9e7e1e3c-da08-4501-8d83-d0b4b0c7e49a)
 
 
+tip: You can minimize the tab with "Alt+Space+n" (or Command+m)
