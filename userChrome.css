@@ -21,14 +21,12 @@
 
 #alltabs-button { display: none !important; }
 
-/* Navigator toolbox 조정 */
-
 #navigator-toolbox {
   overflow: var(--is-bar-visible);
-  width: calc(100%) !important; /* Titlebar 버튼 공간 남기기 */
+  width: calc(100%) !important; 
   min-height: 0px !important;
-  height: 0px !important; /* 높이 설정 */
-  padding-left: 180px; /* Titlebar 버튼 공간을 위한 마진 */
+  height: 0px !important;
+  padding-left: 180px; 
   border-color: transparent !important;
   opacity: 0;
   transition: 0.1s !important;
@@ -44,12 +42,12 @@
 }
 #navigator-toolbox:hover {
   opacity: 1 !important;
-  height: 30px !important; /* 높이 설정 */
+  height: 30px !important; 
   transition: opacity 175ms ease-in-out;
 }
 #navigator-toolbox:focus-within {
   opacity: 1 !important;
-  height: 30px !important; /* 높이 설정 */
+  height: 30px !important;
   --is-bar-visible: visible;
   transition: opacity 175ms ease-in-out;
 }
@@ -76,7 +74,6 @@
   display: none !important;
 }
 
-/* Sidebar 상단 마진 설정 */
 
 
 
@@ -92,17 +89,11 @@ toolbarbutton[open=true] {
 
 /**/
 
-/* Source: https://gist.github.com/teksisto/d6b4d37219e957d9cdcdb3ec88952c15 */
-
-/*@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
-
-/* Sidebar min and max width removal */
  #sidebar {
   max-width: none !important;
   min-width: 0px !important;
 }
 
-/* Hide splitter, when using Tree Style Tab. */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
   display: none !important;
 }
@@ -147,7 +138,6 @@ toolbarbutton[open=true] {
 } */
 
 
-/* Wider Pinned Tabs */
 .tabbrowser-tab[pinned] {
   padding-left: 20px;
   padding-right: 20px;
