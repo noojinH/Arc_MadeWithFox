@@ -1,0 +1,154 @@
+
+#TabsToolbar{
+   visibility: collapse;
+}
+
+#TabsToolbar .titlebar-buttonbox-container  {
+ visibility: visible;
+ position:absolute;
+ left: -95px;
+ z-index: -1;
+}
+
+#PersonalToolbar {
+  display: none;
+}
+
+.newTabBrowserPanel{
+   visibility:collapse !important;
+}
+
+
+#alltabs-button { display: none !important; }
+
+/* Navigator toolbox 조정 */
+
+#navigator-toolbox {
+  overflow: var(--is-bar-visible);
+  width: calc(100%) !important; /* Titlebar 버튼 공간 남기기 */
+  min-height: 0px !important;
+  height: 0px !important; /* 높이 설정 */
+  padding-left: 180px; /* Titlebar 버튼 공간을 위한 마진 */
+  border-color: transparent !important;
+  opacity: 0;
+  transition: 0.1s !important;
+}
+
+#main-window[inFullscreen="true"] #navigator-toolbox {
+  transition: 0s !important;
+} 
+
+#navigator-toolbox:not(:hover) {
+  --is-bar-visible: hidden;
+  transition: height 200ms ease-in-out, opacity 175ms ease-in-out;
+}
+#navigator-toolbox:hover {
+  opacity: 1 !important;
+  height: 30px !important; /* 높이 설정 */
+  transition: opacity 175ms ease-in-out;
+}
+#navigator-toolbox:focus-within {
+  opacity: 1 !important;
+  height: 30px !important; /* 높이 설정 */
+  --is-bar-visible: visible;
+  transition: opacity 175ms ease-in-out;
+}
+
+#nav-bar { 
+  padding-right: 150px; 
+  padding-left: 10px;
+  background: #f0f0f0 !important;
+  border-radius: 10px;
+}
+
+:root[lwtheme-brighttext]{
+   #nav-bar { 
+  background: #1c1b22 !important;
+}
+}
+
+#forward-button,
+#back-button{
+   left: 0px;
+}
+
+#reload-button, home-button{
+  display: none !important;
+}
+
+/* Sidebar 상단 마진 설정 */
+
+
+
+/* full screen toolbars */
+#navigator-toolbox[inFullscreen] toolbar:not([collapsed="true"]) {
+  visibility:visible!important;
+}
+
+toolbarbutton[open=true] {
+  --is-bar-visible: visible !important;
+}
+
+
+/**/
+
+/* Source: https://gist.github.com/teksisto/d6b4d37219e957d9cdcdb3ec88952c15 */
+
+/*@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+/* Sidebar min and max width removal */
+ #sidebar {
+  max-width: none !important;
+  min-width: 0px !important;
+}
+
+/* Hide splitter, when using Tree Style Tab. */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
+  display: none !important;
+}
+
+
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+   /*min-width: 67px !important;
+   max-width: 67px !important;*/
+   visibility: visible;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+  min-width: 150px !important;
+  max-width: 150px !important;
+  transition: all 200ms !important;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
+  min-width: 200px !important;
+  max-width: 200px !important;
+  /*transition: all 200ms !important;*/
+  --hving: visible !important;
+}
+
+#sidebar-header {
+  height: calc(100% -50px) !important; /* 높이 설정 */
+  padding-top: 50px; /* 상단에 50px 마진 추가 */
+}
+
+
+#main-window[inFullscreen="true"] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]{
+  visibility: collapse;
+}
+
+/* #main-window[inFullscreen="true"]  #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
+   visibility: visible;
+    min-width: var(--wide-tab-width) !important;
+    max-width: var(--wide-tab-width) !important;
+    margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
+    z-index:1;
+} */
+
+
+/* Wider Pinned Tabs */
+.tabbrowser-tab[pinned] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
