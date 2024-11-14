@@ -1,5 +1,5 @@
 # Arc_MadeWithFox
-Modern, Simple, Neumorphism. Inspired by Arc browser (compatitable with FireFox)
+Modern, Simple, Neumorphism. Inspired by Arc browser (compatitable with FireFox desktop)
 
 Required: TreeStyleTab by Piro (https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
 
