@@ -2,6 +2,7 @@
 Modern, Simple, Neumorphism. Inspired by Arc browser (compatitable with FireFox desktop)
 
 Required: TreeStyleTab by Piro (https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
+
 Recommend: Tab Session Manager by sienori (https://addons.mozilla.org/en-US/firefox/addon/tab-session-manager/)
 
 
